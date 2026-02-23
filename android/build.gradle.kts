@@ -4,17 +4,7 @@ allprojects {
         google()
         mavenCentral()
         maven {
-            url = uri("https://maven.pkg.github.com/bubbl-repo/bubbl-android-sdk")
-            credentials {
-                username =
-                    (findProperty("BUBBL_MAVEN_USER") as String?)
-                        ?: System.getenv("BUBBL_MAVEN_USER")
-                        ?: ""
-                password =
-                    (findProperty("BUBBL_MAVEN_TOKEN") as String?)
-                        ?: System.getenv("BUBBL_MAVEN_TOKEN")
-                        ?: ""
-            }
+            url = uri("https://maven.bubbl.tech/repository/releases/")
         }
     }
 }
